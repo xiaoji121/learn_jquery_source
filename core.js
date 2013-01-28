@@ -376,6 +376,10 @@ jQuery.extend({
 		}
 	},
 
+/**
+dongming.jidm
+还没看懂这个方法
+**/
 	// Handle when the DOM is ready
 	ready: function( wait ) {
 
@@ -498,7 +502,10 @@ dongming.jidm
 		if ( parsed ) {
 			return [ context.createElement( parsed[1] ) ];
 		}
-
+/**
+dongming.jidm
+jQuery.buildFragment 这个方法貌似挺复杂，后面看
+**/
 		parsed = jQuery.buildFragment( [ data ], context, scripts );
 		if ( scripts ) {
 			jQuery( scripts ).remove();
