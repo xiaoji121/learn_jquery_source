@@ -531,6 +531,11 @@ jQuery.buildFragment 这个方法貌似挺复杂，后面看
 			if ( data ) {
 				// Make sure the incoming data is actual JSON
 				// Logic borrowed from http://json.org/json2.js
+				/**
+				 * dongming.jidm
+				 * 这些正则有些难懂，还要看一下json
+				 * douglas 的这个要看看https://github.com/douglascrockford/JSON-js
+				 */
 				if ( rvalidchars.test( data.replace( rvalidescape, "@" )
 					.replace( rvalidtokens, "]" )
 					.replace( rvalidbraces, "")) ) {
@@ -644,6 +649,10 @@ jQuery.buildFragment 这个方法貌似挺复杂，后面看
 	},
 
 	// Use native String.trim function wherever possible
+	/**
+	 * dongming.jidm
+	 * \xA0 是&nbsp;
+	 */
 	trim: core_trim && !core_trim.call("\uFEFF\xA0") ?
 		function( text ) {
 			return text == null ?
