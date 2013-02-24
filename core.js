@@ -802,10 +802,12 @@ jQuery.buildFragment 这个方法貌似挺复杂，后面看
 		// Simulated bind
 		args = core_slice.call( arguments, 2 );
 		proxy = function() {
+			// 为什么要把所有参数都cancat进去呢？dongming.jidm
 			return fn.apply( context || this, args.concat( core_slice.call( arguments ) ) );
 		};
 
 		// Set the guid of unique handler to the same of original handler, so it can be removed
+		// 这句话是什么作用呢？dongming.jidm
 		proxy.guid = fn.guid = fn.guid || jQuery.guid++;
 
 		return proxy;
